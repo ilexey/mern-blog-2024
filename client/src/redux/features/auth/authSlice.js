@@ -45,7 +45,7 @@ export const loginUser = createAsyncThunk('auth/loginUser',
 export const getMe = createAsyncThunk('auth/getMe',
   async () => {
     try {
-      const {data} = await axios.post('/auth/me')
+      const {data} = await axios.get('/auth/me')
       return data
     } catch (error) {
       console.log(error)
